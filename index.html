@@ -31,12 +31,16 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
     <div class="wrapper">
       <div class="sidebar">
-       
         <div class="sidebar-content">
           <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <a href="#" class="navbar-brand">Navigation</a>
@@ -48,12 +52,12 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="nav navbar-nav">
                 <li class="nav-item">
@@ -768,20 +772,26 @@
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <form method="post" action="habtamuaragie700@gmail.com">
+                  <form action="https://formsubmit.co/habtamuaragie700@gmail.com" method="POST">
                     <div class="form-row">
                       <div class="form-group col-md-6">
+                        <!-- Removed unused access_key hidden input to prevent errors -->
                         <input
                           type="text"
                           class="form-control"
                           placeholder="Your Name"
+                          name="name"
+                          required
                         />
+                        
                       </div>
                       <div class="form-group col-md-6">
                         <input
                           type="email"
                           class="form-control"
                           placeholder="Your Email"
+                          name="email"
+                          required
                         />
                       </div>
                     </div>
@@ -790,6 +800,8 @@
                         type="text"
                         class="form-control"
                         placeholder="Subject"
+                        name="subject"
+                        required
                       />
                     </div>
                     <div class="form-group">
@@ -797,6 +809,8 @@
                         class="form-control"
                         rows="5"
                         placeholder="Message"
+                        name="message"
+                        required
                       ></textarea>
                     </div>
                     <div>
